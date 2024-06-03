@@ -281,7 +281,7 @@ def handle_message(event):
                         actions=[
                             MessageTemplateAction(
                                 label='測試按鈕-1',
-                                text=''
+                                text='您剛剛點擊了【測試按鈕-2】'
                             ),
                             MessageTemplateAction(
                                 label='測試按鈕-2',
