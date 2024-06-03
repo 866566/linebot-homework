@@ -158,8 +158,8 @@ def handle_message(event):
     elif user_message.find('圖片訊息') != -1 :         #判斷用戶使否傳來"圖片訊息"關鍵字，若為是則觸發本區段。  
         
         res_message = ImageSendMessage(
-            original_content_url='https://cdn2.ettoday.net/images/3053/3053944.jpg',
-            preview_image_url='https://cdn2.ettoday.net/images/3053/3053944.jpg'
+            original_content_url='https://www.nups.ntnu.edu.tw/upfiles/univ-expo/%E5%8D%97%E9%83%A8/%E9%AB%98%E9%9B%84%E5%B8%82/%E6%8A%80%E5%B0%88%E6%A0%A1%E9%99%A2/%E6%96%87%E8%97%BB/%E6%96%87%E8%97%BB-pic04.jpg',
+            preview_image_url='https://www.nups.ntnu.edu.tw/upfiles/univ-expo/%E5%8D%97%E9%83%A8/%E9%AB%98%E9%9B%84%E5%B8%82/%E6%8A%80%E5%B0%88%E6%A0%A1%E9%99%A2/%E6%96%87%E8%97%BB/%E6%96%87%E8%97%BB-pic04.jpg'
         )
         line_bot_api.reply_message(event.reply_token,res_message)
         return 0  
