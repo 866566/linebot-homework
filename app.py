@@ -148,30 +148,37 @@ def handle_message(event):
         
 ###############################################################################
         #user_message='文字訊息'
-    elif user_message.find('文字訊息') != -1:         #判斷用戶使否傳來"文字訊息"關鍵字，若為是則觸發本區段。   
+    elif user_message.find('我想查看所有商品的清單') != -1:         #判斷用戶使否傳來"文字訊息"關鍵字，若為是則觸發本區段。
         
-        res_message = TextSendMessage(text='歡迎使用文藻E點通，您選擇的是文字測試訊息，您目前看到的是【文字訊息】的回覆方式。')        
+        res_message = TextSendMessage(text='當然，這裡是我們的商品清單📜，請隨意瀏覽！ \n店家網址: \nhttp://www.charmshoppingfashionstore.com \n如果有任何問題或需要幫助，隨時告訴我哦！')
         line_bot_api.reply_message(event.reply_token,res_message)
-        return 0   
-        
+        return 0
 ###############################################################################
-    elif user_message.find('圖片訊息') != -1 :         #判斷用戶使否傳來"圖片訊息"關鍵字，若為是則觸發本區段。  
+        # user_message='文字訊息'
+    elif user_message.find('現在有什麼特惠活動嗎？') != -1:  # 判斷用戶使否傳來"文字訊息"關鍵字，若為是則觸發本區段。
+
+        res_message = TextSendMessage(
+            text='太棒了！我們目前的特惠活動正在火熱進行中🔥！ \n這裡是近期的特惠商品列表🎁，超多優惠，等你來搶購💸！ \n我們的特惠活動包括： \n全場滿千折百💯： \n只要消費滿1000元，就能享受100元的折扣！ \n指定商品五折優惠🛍️： \n多款熱門商品限時五折，讓你買到賺到！ \n會員專屬優惠👑： \n加入我們的會員，即可享受額外折扣和專屬禮品🎉！ \n此外，還有一些注意事項需要提醒您📝： \n活動期限⏳：\n 本次特惠活動僅限於2024年6月1日至6月30日，請在活動期間內完成購買。\n 庫存有限⚠️：\n部分特惠商品數量有限，售完即止，建議您儘早購買！ \n不與其他優惠同享🚫： \n本次特惠活動的折扣不可與其他優惠活動同時使用。 \n會員優惠條件📋： \n若要享受會員專屬優惠，請確保您的會員帳號狀態有效，並在結帳時登入。  \n別錯過這些超值好物，快點看看吧👇！ \n還有更多驚喜等著你發現哦🎊！ \n祝您購物愉快🛒！')
+        line_bot_api.reply_message(event.reply_token, res_message)
+        return 0
+###############################################################################
+        # user_message='文字訊息'
+    elif user_message.find('轉接真人客服') != -1:  # 判斷用戶使否傳來"文字訊息"關鍵字，若為是則觸發本區段。
+
+        res_message = TextSendMessage(
+            text='💁客服在線時間:周一~周日 10:00 A.M~19:00 P.m \n若沒有及時回復代表真人客服忙線中，煩請耐心等待回復。 \n您也可以透過以下聯絡方式聯絡本店 \n📞電話：123-456-789 \n📪Email：charmshoppingstore@gmail.com \n🏚️本店地址：高雄市 中華路 00號 \n如有任何問題，請隨時與我們聯繫。')
+        line_bot_api.reply_message(event.reply_token, res_message)
+        return 0
+###############################################################################
+    elif user_message.find('限時秒殺活動開始啦') != -1 :         #判斷用戶使否傳來"圖片訊息"關鍵字，若為是則觸發本區段。
         
         res_message = ImageSendMessage(
-            original_content_url='https://www.nups.ntnu.edu.tw/upfiles/univ-expo/%E5%8D%97%E9%83%A8/%E9%AB%98%E9%9B%84%E5%B8%82/%E6%8A%80%E5%B0%88%E6%A0%A1%E9%99%A2/%E6%96%87%E8%97%BB/%E6%96%87%E8%97%BB-pic04.jpg',
-            preview_image_url='https://www.nups.ntnu.edu.tw/upfiles/univ-expo/%E5%8D%97%E9%83%A8/%E9%AB%98%E9%9B%84%E5%B8%82/%E6%8A%80%E5%B0%88%E6%A0%A1%E9%99%A2/%E6%96%87%E8%97%BB/%E6%96%87%E8%97%BB-pic04.jpg'
+            original_content_url='https://i.imgur.com/cT1I2jD.jpeg',
+            preview_image_url='https://i.imgur.com/cT1I2jD.jpeg'
         )
         line_bot_api.reply_message(event.reply_token,res_message)
         return 0  
-###############################################################################
-    elif user_message.find('圖片訊息') != -1 :         #判斷用戶使否傳來"圖片訊息"關鍵字，若為是則觸發本區段。  
-        
-        res_message = ImageSendMessage(
-            original_content_url='https://cdn2.ettoday.net/images/3053/3053944.jpg',
-            preview_image_url='https://cdn2.ettoday.net/images/3053/3053944.jpg'
-        )
-        line_bot_api.reply_message(event.reply_token,res_message)
-        return 0  
+    
 ###############################################################################
         #user_message='影片訊息'
     elif user_message.find('影片訊息') != -1:         #判斷用戶使否傳來"影片訊息"關鍵字，若為是則觸發本區段。 
@@ -260,7 +267,7 @@ def handle_message(event):
                 actions=[
                     MessageTemplateAction(
                         label='是',
-                        text='文字訊息'
+                        text='我要離開對話'
                     ),
                     MessageTemplateAction(
                         label='否',
@@ -276,47 +283,47 @@ def handle_message(event):
     
 ###############################################################################
         #user_message='輪播模板訊息'
-    elif user_message.find('輪播模板訊息') != -1:         #判斷用戶使否傳來"輪播模板訊息"關鍵字，若為是則觸發本區段。 
+    elif user_message.find('有什麼熱賣的商品推薦嗎？') != -1:         #判斷用戶使否傳來"輪播模板訊息"關鍵字，若為是則觸發本區段。
         
         res_message = TemplateSendMessage(
-            alt_text='本訊息為【輪播模板訊息】',
+            alt_text='本訊息為【有什麼熱賣的商品推薦嗎？】',
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://www.nups.ntnu.edu.tw/upfiles/univ-expo/%E5%8D%97%E9%83%A8/%E9%AB%98%E9%9B%84%E5%B8%82/%E6%8A%80%E5%B0%88%E6%A0%A1%E9%99%A2/%E6%96%87%E8%97%BB/%E6%96%87%E8%97%BB-pic04.jpg',
-                        title='測試輪播模板訊息-1',
-                        text='您可以在此輸入您要描述的文字。',
+                        thumbnail_image_url='https://i.imgur.com/1t99JeL.jpeg',
+                        title='這裡是我們的潮流熱賣商品🔥 \n每一件都是當下最受歡迎的，趕快來看看吧！ \n⚠️備註: 本店皆採取預購制 \n預購完的商品會在3~5個工作日通知寄送',
+                        text='🔥熱賣商品🔥 \n包括寬鬆舒適的Oversized T-shirt👕 \n個性十足的Ripped Jeans👖 \n經典實用的Bomber Jacket🧥 \n這些時尚單品讓你輕鬆走在潮流前端！✨',
                         actions=[
                             MessageTemplateAction(
-                                label='測試按鈕-1',
-                                text='您剛剛點擊了【測試按鈕-2】'
+                                label='Oversized T-shirt 預購',
+                                text='預購當季Oversized T-shirt'
                             ),
                             MessageTemplateAction(
-                                label='測試按鈕-2',
-                                text='您剛剛點擊了【測試按鈕-2】'
+                                label='Ripped Jeans 預購',
+                                text='預購當季Ripped Jeans'
                             ),
-                            URITemplateAction(
-                                label='網頁示範-校務資訊系統',
-                                uri='https://sso.wzu.edu.tw/Portal/login.htm'
+                            MessageTemplateAction(
+                                label='Bomber Jacket 預購',
+                                text='預購當季Bomber Jacket'
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://www.nups.ntnu.edu.tw/upfiles/univ-expo/%E5%8D%97%E9%83%A8/%E9%AB%98%E9%9B%84%E5%B8%82/%E6%8A%80%E5%B0%88%E6%A0%A1%E9%99%A2/%E6%96%87%E8%97%BB/%E6%96%87%E8%97%BB-pic02.jpg',
-                        title='測試輪播模板訊息-2',
-                        text='您可以在此輸入您要描述的文字。',
+                        thumbnail_image_url='https://i.imgur.com/9JgO0oZ.jpeg',
+                        title='我們的潮流熱賣配件都在這裡🔥 \n每一件都是現在最受歡迎的，快來看看吧！ \n⚠️備註: 本店皆採取預購制 \n預購完的商品會在3~5個工作日通知寄送',
+                        text='🔥熱賣配件🔥 \n包括時尚精緻的Statement Necklaces💎 \n實用百搭的Leather Belts👖 \n潮流必備的Trendy Sunglasses🕶️ \n這些配件讓你的穿搭更具個性和風格！✨',
                         actions=[
                             MessageTemplateAction(
-                                label='測試按鈕-3',
-                                text='您剛剛點擊了【測試按鈕-3】'
-                            ),
-                            URITemplateAction(
-                                label='網頁示範-雲端學園',
-                                uri='https://elearning2.wzu.edu.tw/home.php'
+                                label='Statement Necklaces 預購',
+                                text='預購當季Statement Necklaces'
                             ),
                             MessageTemplateAction(
-                                label='測試按鈕-4',
-                                text='您剛剛點擊了【測試按鈕-4】'
+                                label='Leather Belts 預購',
+                                text='預購當季 Leather Belts'
+                            ),
+                            MessageTemplateAction(
+                                label='Trendy Sunglasses 預購',
+                                text='預購當季 Trendy Sunglasses'
                             )
                         ]
                     )
@@ -330,25 +337,25 @@ def handle_message(event):
     
 ###############################################################################
         #user_message='輪播圖模板訊息'
-    elif user_message.find('輪播圖模板訊息') != -1:         #判斷用戶使否傳來"輪播圖模板訊息"關鍵字，若為是則觸發本區段。 
+    elif user_message.find('有什麼最新上架套餐的商品嗎？') != -1:         #判斷用戶使否傳來"輪播圖模板訊息"關鍵字，若為是則觸發本區段。
         
         res_message = TemplateSendMessage(
-            alt_text='本訊息為【輪播圖模板訊息】',
+            alt_text='本訊息為【有什麼最新上架的商品嗎？】',
             template=ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url='https://www.nups.ntnu.edu.tw/upfiles/univ-expo/%E5%8D%97%E9%83%A8/%E9%AB%98%E9%9B%84%E5%B8%82/%E6%8A%80%E5%B0%88%E6%A0%A1%E9%99%A2/%E6%96%87%E8%97%BB/%E6%96%87%E8%97%BB-pic04.jpg',
+                        image_url='https://i.imgur.com/iPXgw5X.jpeg',
                         action=PostbackTemplateAction(
-                            label='輪播圖一',
-                            text='輪播圖一：您可以在此輸入您要描述的文字。',
+                            label='預購',
+                            text='預購此套燦商品',
                             data='action=buy&itemid=1'
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url='https://www.nups.ntnu.edu.tw/upfiles/univ-expo/%E5%8D%97%E9%83%A8/%E9%AB%98%E9%9B%84%E5%B8%82/%E6%8A%80%E5%B0%88%E6%A0%A1%E9%99%A2/%E6%96%87%E8%97%BB/%E6%96%87%E8%97%BB-pic02.jpg',
+                        image_url='https://i.imgur.com/bPN1qEN.jpeg',
                         action=PostbackTemplateAction(
-                            label='輪播圖二',
-                            text='輪播圖二：您可以在此輸入您要描述的文字。',
+                            label='預購',
+                            text='預購此套餐商品',
                             data='action=buy&itemid=2'
                         )
                     )
