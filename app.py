@@ -252,7 +252,7 @@ def handle_message(event):
                 actions=[
                     MessageTemplateAction(
                         label='是',
-                        text='我要離開對話'
+                        text='文字訊息'
                     ),
                     MessageTemplateAction(
                         label='否',
@@ -281,7 +281,7 @@ def handle_message(event):
                         actions=[
                             MessageTemplateAction(
                                 label='測試按鈕-1',
-                                text='您剛剛點擊了【測試按鈕-1】'
+                                text=''
                             ),
                             MessageTemplateAction(
                                 label='測試按鈕-2',
