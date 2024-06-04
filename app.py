@@ -193,15 +193,15 @@ def handle_message(event):
                         text='🔥熱賣商品🔥 \n包括寬鬆舒適T-shirt👕 \n個性十足的Jeans👖 \n經典實用的Jacket🧥 \n這些時尚單品讓你輕鬆走在潮流前端！✨',
                         actions=[
                             MessageTemplateAction(
-                                label='T-shirt預購',
+                                label='T袖預購',
                                 text='預購當季T-shirt'
                             ),
                             MessageTemplateAction(
-                                label='Jeans預購',
+                                label='牛仔褲預購',
                                 text='預購當季Jeans'
                             ),
                             MessageTemplateAction(
-                                label='Jacket預購',
+                                label='夾克預購',
                                 text='預購當季Jacket'
                             )
                         ]
@@ -212,16 +212,16 @@ def handle_message(event):
                         text='🔥熱賣配件🔥 \n包括時尚精緻的Necklaces💎 \n實用百搭的Belts👖 \n潮流必備的Sunglasses🕶️ \n這些配件讓你的穿搭更具個性和風格！✨',
                         actions=[
                             MessageTemplateAction(
-                                label='Necklace預購',
+                                label='項鍊預購',
                                 text='預購當季Necklace'
                             ),
                             MessageTemplateAction(
-                                label='Belts預購',
+                                label='腰帶預購',
                                 text='預購當季Belts'
                             ),
                             MessageTemplateAction(
-                                label='Sunglass預購',
-                                text='預購當季Sunglass'
+                                label='太陽眼鏡預購',
+                                text='預購當季Sunglasses'
                             )
                         ]
                     )
