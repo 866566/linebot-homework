@@ -190,19 +190,19 @@ def handle_message(event):
                     CarouselColumn(
                         thumbnail_image_url='https://i.imgur.com/1t99JeL.jpeg',
                         title='這裡是我們的潮流熱賣商品🔥 \n每一件都是當下最受歡迎的，趕快來看看吧！ \n⚠️備註: 本店皆採取預購制 \n預購完的商品會在3~5個工作日通知寄送',
-                        text='🔥熱賣商品🔥 \n包括寬鬆舒適的Oversized T-shirt👕 \n個性十足的Ripped Jeans👖 \n經典實用的Bomber Jacket🧥 \n這些時尚單品讓你輕鬆走在潮流前端！✨',
+                        text='🔥熱賣商品🔥 \n包括寬鬆舒適T-shirt👕 \n個性十足的Jeans👖 \n經典實用的Jacket🧥 \n這些時尚單品讓你輕鬆走在潮流前端！✨',
                         actions=[
                             MessageTemplateAction(
-                                label='Oversized T-shirt 預購',
-                                text='預購當季Oversized T-shirt'
+                                label='T-shirt預購',
+                                text='預購當季T-shirt'
                             ),
                             MessageTemplateAction(
-                                label='Ripped Jeans 預購',
-                                text='預購當季Ripped Jeans'
+                                label='Jeans預購',
+                                text='預購當季Jeans'
                             ),
                             MessageTemplateAction(
-                                label='Bomber Jacket 預購',
-                                text='預購當季Bomber Jacket'
+                                label='Jacket預購',
+                                text='預購當季Jacket'
                             )
                         ]
                     ),
@@ -212,16 +212,16 @@ def handle_message(event):
                         text='🔥熱賣配件🔥 \n包括時尚精緻的Statement Necklaces💎 \n實用百搭的Leather Belts👖 \n潮流必備的Trendy Sunglasses🕶️ \n這些配件讓你的穿搭更具個性和風格！✨',
                         actions=[
                             MessageTemplateAction(
-                                label='Statement Necklaces 預購',
-                                text='預購當季Statement Necklaces'
+                                label='Necklace預購',
+                                text='預購當季Necklace'
                             ),
                             MessageTemplateAction(
-                                label='Leather Belts 預購',
-                                text='預購當季 Leather Belts'
+                                label='Belts預購',
+                                text='預購當季Belts'
                             ),
                             MessageTemplateAction(
-                                label='Trendy Sunglasses 預購',
-                                text='預購當季 Trendy Sunglasses'
+                                label='Sunglass預購',
+                                text='預購當季Sunglass'
                             )
                         ]
                     )
