@@ -190,7 +190,7 @@ def handle_message(event):
                     CarouselColumn(
                         thumbnail_image_url='https://i.imgur.com/iPXgw5X.jpeg',
                         title='這裡是我們的潮流熱賣商品🔥 \n每一件都是當下最受歡迎的，趕快來看看吧！',
-                        text='🔥熱賣商品🔥 \n包括寬鬆舒適T-shirt👕 \n個性十足的Jeans👖 \n經典實用的Jacket🧥 \n這些時尚單品讓你輕鬆走在潮流前端！✨',
+                        text='🔥熱賣商品🔥',
                         actions=[
                             MessageTemplateAction(
                                 label='T袖預購',
@@ -209,7 +209,7 @@ def handle_message(event):
                     CarouselColumn(
                         thumbnail_image_url='https://i.imgur.com/iPXgw5X.jpeg',
                         title='我們的潮流熱賣配件都在這裡🔥 \n每一件都是現在最受歡迎的，快來看看吧！',
-                        text='🔥熱賣配件🔥 \n包括時尚精緻的Necklaces💎 \n實用百搭的Belts👖 \n潮流必備的Sunglasses🕶️ \n這些配件讓你的穿搭更具個性和風格！✨',
+                        text='🔥熱賣配件🔥',
                         actions=[
                             MessageTemplateAction(
                                 label='項鍊預購',
