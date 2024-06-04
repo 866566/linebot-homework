@@ -188,7 +188,7 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/iPXgw5X.jpeg',
+                        thumbnail_image_url='https://i.imgur.com/1t99JeL_d.jpg?maxwidth=520&shape=thumb&fidelity=high',
                         title='這裡是我們的潮流熱賣商品🔥 \n每一件都是當下最受歡迎的，趕快來看看吧！',
                         text='🔥熱賣商品🔥',
                         actions=[
@@ -207,7 +207,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/iPXgw5X.jpeg',
+                        thumbnail_image_url='https://i.imgur.com/9JgO0oZ.jpeg',
                         title='我們的潮流熱賣配件都在這裡🔥 \n每一件都是現在最受歡迎的，快來看看吧！',
                         text='🔥熱賣配件🔥',
                         actions=[
