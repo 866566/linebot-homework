@@ -184,7 +184,7 @@ def handle_message(event):
     elif user_message.find('有什麼熱賣的商品推薦嗎？') != -1:         #判斷用戶使否傳來"輪播模板訊息"關鍵字，若為是則觸發本區段。
         
         res_message = TemplateSendMessage(
-            alt_text='本訊息為【有什麼熱賣的商品推薦嗎？】',
+            alt_text='本訊息為【輪播模板訊息】',
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
